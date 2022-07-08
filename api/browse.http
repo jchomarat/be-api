@@ -1,0 +1,8 @@
+POST https://{{PURVIEW_NAME}}.purview.azure.com/catalog/api/browse?api-version=2022-03-01-preview
+Authorization: Bearer {{PURVIEW_TOKEN}}
+content-type: application/json
+
+{
+  "entityType": "azure_sql_table",
+  "limit": 10
+}

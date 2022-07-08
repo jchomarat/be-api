@@ -1,0 +1,2 @@
+GET https://{{PURVIEW_NAME}}.purview.azure.com/catalog/api/atlas/v2/types/typedefs/headers
+Authorization: Bearer {{PURVIEW_TOKEN}} 

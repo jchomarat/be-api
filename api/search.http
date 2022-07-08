@@ -1,0 +1,40 @@
+POST https://{{PURVIEW_NAME}}.purview.azure.com/catalog/api/search/query?api-version=2021-05-01-preview
+Authorization: Bearer {{PURVIEW_TOKEN}}
+content-type: application/json
+
+{
+    "keywords": "twitter"
+}
+
+###
+# Search by classification
+POST https://{{PURVIEW_NAME}}.purview.azure.com/catalog/api/search/query?api-version=2021-05-01-preview
+Authorization: Bearer {{PURVIEW_TOKEN}}
+content-type: application/json
+
+{
+  "keywords": null,
+  "limit": 10,
+  "filter": {
+    "classification": "Twitter Handle",
+    "includeSubClassifications": true
+  }
+}
+
+###
+# Search by glossary term
+POST https://{{PURVIEW_NAME}}.purview.azure.com/catalog/api/search/query?api-version=2021-05-01-preview
+Authorization: Bearer {{PURVIEW_TOKEN}}
+content-type: application/json
+
+{
+  "keywords": null,
+  "limit": 3,
+  "filter": {
+    "and": [
+      {
+        "term": "Town"
+      }
+    ]
+  }
+}

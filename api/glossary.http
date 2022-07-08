@@ -1,0 +1,7 @@
+GET https://{{PURVIEW_NAME}}.purview.azure.com/catalog/api/atlas/v2/glossary
+Authorization: Bearer {{PURVIEW_TOKEN}}
+
+####
+
+GET https://{{PURVIEW_NAME}}.purview.azure.com/catalog/api/atlas/v2/glossary/a4bca738-6015-4d74-bc22-6ecc312f2f97/terms
+Authorization: Bearer {{PURVIEW_TOKEN}}
